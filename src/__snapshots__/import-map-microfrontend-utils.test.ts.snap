@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`microfrontendNameToFolderName can process scoped packages 1`] = `"org-root-config"`;
+
+exports[`microfrontendNameToFolderName can process scoped packages 2`] = `"org-name-navbar"`;
+
+exports[`microfrontendNameToFolderName can process scoped packages 3`] = `"org_name-left_nav"`;
+
+exports[`microfrontendNameToFolderName can process unscoped packages 1`] = `"root-config"`;
+
+exports[`microfrontendNameToFolderName can process unscoped packages 2`] = `"navbar"`;
+
+exports[`microfrontendNameToFolderName can process unscoped packages 3`] = `"left_nav"`;
