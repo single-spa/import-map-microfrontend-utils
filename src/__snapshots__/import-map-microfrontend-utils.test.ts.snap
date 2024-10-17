@@ -1,13 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`microfrontendNameToFolderName can process scoped packages 1`] = `"org-root-config"`;
+exports[`getDependenciesURLPrefix returns url with trailing slash 1`] = `"https://cdn.example.com/deps/"`;
 
-exports[`microfrontendNameToFolderName can process scoped packages 2`] = `"org-name-navbar"`;
+exports[`getMicrofrontendURLPrefix can process scoped packages 1`] = `"https://cdn.example.com/mfes/org-root-config/"`;
 
-exports[`microfrontendNameToFolderName can process scoped packages 3`] = `"org_name-left_nav"`;
+exports[`getMicrofrontendURLPrefix can process scoped packages 2`] = `"https://cdn.example.com/mfes/org-name-navbar/"`;
 
-exports[`microfrontendNameToFolderName can process unscoped packages 1`] = `"root-config"`;
+exports[`getMicrofrontendURLPrefix can process scoped packages 3`] = `"https://cdn.example.com/mfes/org_name-left_nav/"`;
 
-exports[`microfrontendNameToFolderName can process unscoped packages 2`] = `"navbar"`;
+exports[`getMicrofrontendURLPrefix can process unscoped packages 1`] = `"https://cdn.example.com/mfes/root-config/"`;
 
-exports[`microfrontendNameToFolderName can process unscoped packages 3`] = `"left_nav"`;
+exports[`getMicrofrontendURLPrefix can process unscoped packages 2`] = `"https://cdn.example.com/mfes/navbar/"`;
+
+exports[`getMicrofrontendURLPrefix can process unscoped packages 3`] = `"https://cdn.example.com/mfes/left_nav/"`;
