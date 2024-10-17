@@ -1,8 +1,11 @@
 {
-  "name": "import-map-microfrontend-utils",
+  "name": "@single-spa/import-map-microfrontend-utils",
   "version": "1.0.0",
   "description": "Utility types and functions for import-map-microfrontend projects",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "default": "./lib/import-map-microfrontend-utils.js",
