@@ -11,10 +11,11 @@
   },
   "scripts": {
     "clean": "rimraf lib",
-    "build": "pnpm clean && tsc",
+    "build": "tsc",
     "check-format": "prettier --check .",
     "format": "prettier --write .",
     "test": "jest",
+    "prepublishOnly": "pnpm clean && pnpm build",
     "prepare": "husky"
   },
   "keywords": [
