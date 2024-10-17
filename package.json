@@ -1,0 +1,39 @@
+{
+  "name": "import-map-microfrontend-utils",
+  "version": "1.0.0",
+  "description": "Utility types and functions for import-map-microfrontend projects",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./lib/import-map-microfrontend-utils.js",
+      "types": "./lib/import-map-microfrontend-utils.d.ts"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "pnpm clean && tsc",
+    "check-format": "prettier --check .",
+    "format": "prettier --write .",
+    "test": "jest",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "single-spa"
+  ],
+  "author": "Joel Denning",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
+    "@babel/preset-typescript": "^7.25.7",
+    "@jest/globals": "^29.7.0",
+    "babel-jest": "^29.7.0",
+    "husky": "^9.1.6",
+    "jest": "^29.7.0",
+    "jest-cli": "^29.7.0",
+    "prettier": "^3.3.3",
+    "pretty-quick": "^4.0.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.3"
+  }
+}
