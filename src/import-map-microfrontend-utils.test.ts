@@ -1,5 +1,5 @@
 import { describe, expect, it } from "@jest/globals";
-import { microfrontendNameToFolderName } from "./import-map-microfrontend-utils.js";
+import { microfrontendNameToFolderName } from "./import-map-microfrontend-utils";
 
 describe(`microfrontendNameToFolderName`, () => {
   it(`can process unscoped packages`, () => {
