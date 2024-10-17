@@ -20,6 +20,9 @@
   "keywords": [
     "single-spa"
   ],
+  "files": [
+    "lib"
+  ],
   "author": "Joel Denning",
   "license": "MIT",
   "devDependencies": {
