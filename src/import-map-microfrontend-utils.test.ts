@@ -1,18 +1,37 @@
 import { describe, expect, it } from "@jest/globals";
-import { microfrontendNameToFolderName } from "./import-map-microfrontend-utils";
+import { ImportMapMicrofrontendUtils } from "./import-map-microfrontend-utils";
 
-describe(`microfrontendNameToFolderName`, () => {
+describe(`getMicrofrontendURLPrefix`, () => {
   it(`can process unscoped packages`, () => {
-    expect(microfrontendNameToFolderName("root-config")).toMatchSnapshot();
-    expect(microfrontendNameToFolderName("navbar")).toMatchSnapshot();
-    expect(microfrontendNameToFolderName("left_nav")).toMatchSnapshot();
+    const utils = new ImportMapMicrofrontendUtils({
+      baseOrigin: "https://cdn.example.com",
+    });
+    expect(utils.getMicrofrontendURLPrefix("root-config")).toMatchSnapshot();
+    expect(utils.getMicrofrontendURLPrefix("navbar")).toMatchSnapshot();
+    expect(utils.getMicrofrontendURLPrefix("left_nav")).toMatchSnapshot();
   });
 
   it(`can process scoped packages`, () => {
-    expect(microfrontendNameToFolderName("@org/root-config")).toMatchSnapshot();
-    expect(microfrontendNameToFolderName("@org-name/navbar")).toMatchSnapshot();
+    const utils = new ImportMapMicrofrontendUtils({
+      baseOrigin: "https://cdn.example.com",
+    });
     expect(
-      microfrontendNameToFolderName("@org_name/left_nav"),
+      utils.getMicrofrontendURLPrefix("@org/root-config"),
     ).toMatchSnapshot();
+    expect(
+      utils.getMicrofrontendURLPrefix("@org-name/navbar"),
+    ).toMatchSnapshot();
+    expect(
+      utils.getMicrofrontendURLPrefix("@org_name/left_nav"),
+    ).toMatchSnapshot();
+  });
+});
+
+describe(`getDependenciesURLPrefix`, () => {
+  it(`returns url with trailing slash`, () => {
+    const utils = new ImportMapMicrofrontendUtils({
+      baseOrigin: "https://cdn.example.com",
+    });
+    expect(utils.getDependenciesURLPrefix()).toMatchSnapshot();
   });
 });
